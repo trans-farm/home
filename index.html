@@ -167,31 +167,13 @@
 				<p>以下のフォームから問い合わせ内容を送ってください。<br>もしくは <a href="mailto:inquiry@trans.farm">inquiry@trans.farm</a> まで</p>
 			</div>
 			<div class="col-md-8 col-md-offset-2">
-				<form id="contact" method="post" class="form" role="form">
-					<div class="row">
-						<div class="col-md-6 form-group">
-							<input class="form-control" id="name" name="name" placeholder="名前" type="text" required />
-						</div>
-						<div class="col-md-6 form-group">
-							<input class="form-control" id="email" name="email" placeholder="メールアドレス" type="email" required />
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 form-group">
-							<input class="form-control" id="tel" name="tel" placeholder="電話番号" type="tel" required />
-						</div>
-						<div class="col-md-12 form-group">
-							<input class="form-control" id="title" name="title" placeholder="件名" type="text" required />
-						</div>
-					</div>
-					<textarea class="form-control" id="message" name="message" placeholder="問い合わせ内容（必須）" rows="5" required></textarea>
-					<br />
-					<div class="row">
-						<div class="col-md-12 form-group">
-							<button class="btn btn-primary" type="submit">送信</button>
-						</div>
-					</div>
-				</form>
+				<script src="https://sdk.form.run/js/v2/embed.js"></script>
+				<div
+					class="formrun-embed"
+					data-formrun-form="@transfarm-inquiry"
+					data-formrun-redirect="true">
+				</div>
+
 			</div>
 		</div><!--/.row-->
 	</div><!--/.container-->
