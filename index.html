@@ -167,12 +167,43 @@
 				<p>以下のフォームから問い合わせ内容を送ってください。<br>もしくは <a href="mailto:inquiry@trans.farm">inquiry@trans.farm</a> まで</p>
 			</div>
 			<div class="col-md-8 col-md-offset-2">
-				<script src="https://sdk.form.run/js/v2/embed.js"></script>
-				<div
-					class="formrun-embed"
-					data-formrun-form="@transfarm-inquiry"
-					data-formrun-redirect="true">
-				</div>
+
+				<form id="contact" class="formrun" action="https://form.run/api/v1/r/iyuvwwe9jfm5xauth0v5me3e" method="post">
+					<div class="row">
+						<div class="col-md-6 form-group">
+							<input class="form-control" id="name" name="お名前" placeholder="名前" type="text" required />
+						</div>
+						<div class="col-md-6 form-group">
+							<input class="form-control" id="email" name="email" placeholder="メールアドレス" type="email" required data-formrun-type="email" data-formrun-required/>
+							<div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 form-group">
+							<input class="form-control" id="tel" name="tel" placeholder="電話番号" type="tel" required data-formrun-required/>
+						</div>
+						<div class="col-md-12 form-group">
+							<input class="form-control" id="title" name="title" placeholder="件名" type="text" required data-formrun-required/>
+						</div>
+					</div>
+					<textarea class="form-control" id="message" name="お問い合わせ" placeholder="問い合わせ内容（必須）" rows="5" required data-formrun-required></textarea>
+					<div data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
+
+					<!-- ボット投稿をブロックするためのタグ -->
+					<div class="_formrun_gotcha">
+						<style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+						<label for="_formrun_gotcha">If you are a human, ignore this field</label>
+						<input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+					</div>
+					<br />
+
+					<div class="row">
+						<div class="col-md-12 form-group">
+							<button class="btn btn-primary" type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
+						</div>
+					</div>
+					
+				</form>
 
 			</div>
 		</div><!--/.row-->
@@ -200,5 +231,6 @@
 <script src="//code.jquery.com/jquery.js"></script>
 <!-- Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="https://sdk.form.run/js/v2/formrun.js"></script>
 </body>
 </html>
